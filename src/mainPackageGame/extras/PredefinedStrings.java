@@ -19,4 +19,13 @@ public class PredefinedStrings {
                 ")";
         return sql;
     }
+
+    public static String getStringToSearchPokemonUserAndType (String user, String type){
+        String sql = "" +
+                "CALL searchPokemonsOfATypeAndUser\t(" +
+                '"'+user+'"'+","+
+                '"'+type+'"'+
+                ")";
+        return sql;
+    }
 }
