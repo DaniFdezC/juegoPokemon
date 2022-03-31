@@ -51,7 +51,7 @@ public class CollectionPage extends JFrame {
             try {
                 String typeToSearch = (String) chooseList.getSelectedItem();
 
-                
+
 
             } catch (Exception e1){
                 System.out.println(e1.getMessage());
