@@ -46,17 +46,9 @@ public class HomePage extends JFrame {
 
         JButton buttonCatch = new JButton("Catch");
         buttonCatch.addActionListener(e -> {
-            try {
-                dispose(); //cerrar homepage
-
-                ChooseCatchingPage catchingPage = new ChooseCatchingPage(connection);
-
-                catchingPage.show();
-
-
-            } catch (Exception e1){
-                System.out.println(e1.getMessage());
-            }
+            dispose();
+            ChooseCatchingPage catchingPage = new ChooseCatchingPage(connection,user);
+            catchingPage.show();
         });
         buttonCatch.setFont(getFontBySize(23));
         buttonCatch.setBounds(widthFrameThird, 220, 400, 60);

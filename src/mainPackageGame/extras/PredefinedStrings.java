@@ -28,4 +28,8 @@ public class PredefinedStrings {
                 ")";
         return sql;
     }
+
+    public static String[] getStringNamesOfColumns(){
+        return new String[]{"id", "user", "pokemon", "level"};
+    }
 }

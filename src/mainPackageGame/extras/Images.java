@@ -21,4 +21,21 @@ public class Images {
 
         return icon;
     }
+
+    public static ImageIcon getImageLocation(String location, boolean isJPG, int widthFrame, int heightFrame){
+        ImageIcon icon = null;
+        String direction = null;
+        if (isJPG) direction = "src\\mainPackageGame\\images\\locations\\"+location+".jpg";
+        else direction = "src\\mainPackageGame\\images\\locations\\"+location+".png";
+
+        try {
+            BufferedImage bufferedImage = ImageIO.read(new File(direction));
+            Image image = bufferedImage.getScaledInstance(widthFrame, heightFrame, Image.SCALE_DEFAULT);
+            icon = new ImageIcon(image);
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        return icon;
+    }
 }
